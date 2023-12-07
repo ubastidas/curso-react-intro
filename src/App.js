@@ -1,10 +1,10 @@
+import React from 'react';
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { TodoCreateButton } from './TodoCreateButton';
 import './App.css';
-
 
 const defaultTodos = [
   {
@@ -27,10 +27,14 @@ const defaultTodos = [
 
 
 function App() {
+
+  const[searchValue, setSearchValue] = React.useState('');
+  console.log(searchValue);
+
   return (
     <>      
       <TodoCounter completed={ 12 } total={ 15 } />
-      <TodoSearch />
+      <TodoSearch  searchValue={searchValue} setSearchValue={setSearchValue} />
       
       <TodoList>
       { defaultTodos.map( todo => (
