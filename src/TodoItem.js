@@ -10,13 +10,13 @@ export const TodoItem = ( { text, completed, onComplete, onDelete } ) => {
                 className={ `Icon Icon-check ${completed && 'Icon-check--active'}` } 
                 onClick={ onComplete }>✔
             </span> */}
-            <CompleteIcon />
+            <CompleteIcon completed={ completed } onClick={ onComplete }/>
             <p className={`TodoItem-p ${completed && 'TodoItem-p--complete'}`}>{ text }</p>
             {/* <span 
                 className='Icon Icon-delete'
                 onClick={ onDelete }>X
             </span> */}
-            <DeleteIcon />
+            <DeleteIcon onClick={ onDelete }/>
         </li>
     )  
 }

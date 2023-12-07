@@ -17,7 +17,7 @@ const defaultTodos = [
   },
   {
     text: 'Otra tarea 3',
-    completed: false,
+    completed: true,
   },
   {
     text: 'Vainas 4',

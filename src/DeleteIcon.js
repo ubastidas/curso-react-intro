@@ -1,7 +1,8 @@
 import React from 'react'
+import { TodoIcon } from "./TodoIcon"
 
-export const DeleteIcon = () => {
+export const DeleteIcon = ({ onClick }) => {
   return (
-    <span>X</span>
+    <TodoIcon type="delete" color='gray' onClick={ onClick } />
   )
 }

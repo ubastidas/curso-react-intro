@@ -1,7 +1,8 @@
 import React from 'react'
+import { TodoIcon } from './TodoIcon'
 
-export const CompleteIcon = () => {
+export const CompleteIcon = ({ completed, onClick }) => {
   return (
-    <span>V</span>
+    <TodoIcon type="check" color={ completed ? 'green' : 'gray' } onClick={ onClick } />
   )
 }
